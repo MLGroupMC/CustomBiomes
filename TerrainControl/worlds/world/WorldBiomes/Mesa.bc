@@ -359,7 +359,10 @@ Grass(DEAD_BUSH,NotGrouped,7,100.0,SAND,HARD_CLAY,STAINED_CLAY,DIRT)
 Plant(PUMPKIN,1,3.0,0,128,GRASS)
 Reed(SUGAR_CANE_BLOCK,5,100.0,0,128,GRASS,DIRT,SAND)
 Cactus(CACTUS,10,100.0,0,128,SAND)
-CustomObject(cactus1, cactus2, ldeadtree, mdeadtree)
+Tree(1, ldeadtree, 7)
+Tree(2, mdeadtree, 7)
+Tree(2, sdeadtree, 7)
+CustomObject(cactus1, cactus2)
 
 #######################################################################
 # +-----------------------------------------------------------------+ #

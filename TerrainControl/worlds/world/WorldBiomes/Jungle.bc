@@ -364,8 +364,6 @@ Plant(MELON_BLOCK,1,100.0,0,128,GRASS,DIRT)
 Plant(Poppy,4,100.0,0,128,GRASS,DIRT)
 Plant(Dandelion,4,100.0,0,128,GRASS,DIRT)
 Plant(PUMPKIN,1,3.0,0,128,GRASS)
-CustomObject(UseWorld)
-
 #######################################################################
 # +-----------------------------------------------------------------+ #
 # |                         Sapling resource                        | #

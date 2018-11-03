@@ -81,7 +81,7 @@ BiomeIsBorder:
 
 # List of biomes that cancel spawning of this biome.
 # For example, the Beach biome will never spawn next to an Extreme Hills biome.
-NotBorderNear: 
+NotBorderNear: Desert, Mesa, Jungle, Savanna 
 
 # Size of this biome when spawned as a border biome in BiomeMode: Normal.
 # Valid values range from 0 to GenerationDepth.

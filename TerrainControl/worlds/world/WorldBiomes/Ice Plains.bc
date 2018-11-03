@@ -81,7 +81,7 @@ BiomeIsBorder:
 
 # List of biomes that cancel spawning of this biome.
 # For example, the Beach biome will never spawn next to an Extreme Hills biome.
-NotBorderNear: 
+NotBorderNear: Desert, Mesa, Jungle, Savanna 
 
 # Size of this biome when spawned as a border biome in BiomeMode: Normal.
 # Valid values range from 0 to GenerationDepth.
@@ -356,9 +356,9 @@ UnderWaterOre(CLAY,4,1,100.0,DIRT,CLAY)
 UnderWaterOre(GRAVEL,6,1,100.0,DIRT,GRASS)
 Dungeon(8,100.0,0,128)
 Tree(2, GroundBush, 10)
-Tree(1,Taiga2,15)
-Tree(2, ssprucetree, 10)
-CustomObject(UseWorld)
+Tree(1, Taiga2, 5)
+Tree(1, ssprucetree, 5)
+CustomObject(iceigloo, snowigloo, campfire)
 
 #######################################################################
 # +-----------------------------------------------------------------+ #

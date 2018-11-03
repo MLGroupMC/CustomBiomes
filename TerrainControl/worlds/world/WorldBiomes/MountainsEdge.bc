@@ -33,7 +33,7 @@ ResourceInheritance: true
 #   Isle biomes:   BiomeSizeWhenIsle (see below)
 #   Border biomes: BiomeSizeWhenBorder (see below)
 #   River biomes:  RiverSize (see WorldConfig)
-BiomeSize: 4
+BiomeSize: 7
 
 # Biome rarity from 100 to 1. If this is normal or ice biome - chance for spawn this biome then others.
 # Example for normal biome :
@@ -45,7 +45,7 @@ BiomeRarity: 100
 
 # The hexadecimal color value of this biome. Used in the output of the /otg map command,
 # and used in the input of BiomeMode: FromImage.
-BiomeColor: #8DB360
+BiomeColor: #666666
 
 ####################
 # Isle biomes only #
@@ -62,10 +62,10 @@ IsleInBiome:
 # Valid values range from 0 to GenerationDepth.
 # Larger numbers give *smaller* islands. The biome must be smaller than the biome it's going
 # to spawn in, so the BiomeSizeWhenIsle number must be larger than the BiomeSize of the other biome.
-BiomeSizeWhenIsle: 6
+BiomeSizeWhenIsle: 9
 
 # Rarity of this biome when spawned as an isle biome in BiomeMode: Normal.
-BiomeRarityWhenIsle: 97
+BiomeRarityWhenIsle: 100
 
 ######################
 # Border biomes only #
@@ -77,17 +77,17 @@ BiomeRarityWhenIsle: 97
 # List of biomes this biome can be a border of.
 # For example, the Beach biome is a border on the Ocean biome, so
 # it can spawn anywhere on the border of an ocean.
-BiomeIsBorder: 
+BiomeIsBorder: MountainsRange
 
 # List of biomes that cancel spawning of this biome.
 # For example, the Beach biome will never spawn next to an Extreme Hills biome.
-NotBorderNear: 
+NotBorderNear: Desert, Mesa, Jungle, Savanna 
 
 # Size of this biome when spawned as a border biome in BiomeMode: Normal.
 # Valid values range from 0 to GenerationDepth.
 # Larger numbers give *smaller* borders. The biome must be smaller than the biome it's going
 # to spawn in, so the BiomeSizeWhenBorder number must be larger than the BiomeSize of the other biome.
-BiomeSizeWhenBorder: 8
+BiomeSizeWhenBorder: 7
 
 
 #######################################################################
@@ -99,16 +99,16 @@ BiomeSizeWhenBorder: 8
 # BiomeHeight mean how much height will be added in terrain generation
 # It is double value from -10.0 to 10.0
 # Value 0.0 equivalent half of map height with all other default settings
-BiomeHeight: 0
+BiomeHeight: -0.6
 
 # Biome volatility.
-BiomeVolatility: 0
+BiomeVolatility: 0.05
 
 # Smooth radius between biomes. Must be between 0 and 32, inclusive. The resulting
 # smooth radius seems to be  (thisSmoothRadius + 1 + smoothRadiusOfBiomeOnOtherSide) * 4 .
 # So if two biomes next to each other have both a smooth radius of 2, the
 # resulting smooth area will be (2 + 1 + 2) * 4 = 20 blocks wide.
-SmoothRadius: 4
+SmoothRadius: 5
 
 # If this value is greater than 0, then it will affect how much, on average, the terrain will rise before leveling off when it begins to increase in elevation.
 # If the value is less than 0, then it will cause the terrain to either increase to a lower height before leveling out or decrease in height if the value is a large enough negative.
@@ -157,7 +157,7 @@ CustomHeightControl: 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
 
 # Only available when ImprovedRivers is set to false in the WorldConfig.
 # Sets which biome is used as the river biome.
-RiverBiome: River
+RiverBiome: FrozenRiver
 
 #######################
 # ImprovedRivers:true #
@@ -189,7 +189,7 @@ RiverCustomHeightControl: 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
 StoneBlock: STONE
 
 # Surface block, usually GRASS.
-SurfaceBlock: GRASS
+SurfaceBlock: SNOW_BLOCK
 
 # Block from stone to surface, like dirt in most biomes.
 GroundBlock: DIRT
@@ -249,12 +249,12 @@ CooledLavaBlock: STATIONARY_LAVA
 # When this value is around 0.2, snow will fall on mountain peaks above y=90.
 # When this value is around 0.1, the whole biome will be covered in snow and ice.
 # However, on default biomes, this won't do anything except changing the grass and leaves colors slightly.
-BiomeTemperature: 0.8
+BiomeTemperature: 0.0
 
 # Biome wetness. Float value from 0.0 to 1.0.
 # If this biome is a custom biome, and this value is set to 0, no rain will fall.
 # On default biomes, this won't do anything except changing the grass and leaves colors slightly.
-BiomeWetness: 0.4
+BiomeWetness: 0.5
 
 # Biome sky color.
 SkyColor: #7BA5FF
@@ -355,23 +355,10 @@ UnderWaterOre(SAND,7,3,100.0,DIRT,GRASS)
 UnderWaterOre(CLAY,4,1,100.0,DIRT,CLAY)
 UnderWaterOre(GRAVEL,6,1,100.0,DIRT,GRASS)
 Dungeon(8,100.0,0,128)
-Grass(Fern,NotGrouped,20,100.0,GRASS,DIRT)
-Grass(DoubleTallgrass,Grouped,10,15.0,GRASS,DIRT)
-Grass(Tallgrass,NotGrouped,100,100.0,GRASS,DIRT)
-Plant(Poppy,1,100.0,0,128,GRASS,DIRT)
-Plant(Dandelion,3,100.0,0,128,GRASS,DIRT)
-Plant(OrangeTulip,3,25.0,0,128,GRASS,DIRT)
-Plant(RedTulip,3,25.0,0,128,GRASS,DIRT)
-Plant(WhiteTulip,3,25.0,0,128,GRASS,DIRT)
-Plant(PinkTulip,3,25.0,0,128,GRASS,DIRT)
-Plant(AzureBluet,3,100.0,0,128,GRASS,DIRT)
-Plant(OxeyeDaisy,3,100.0,0,128,GRASS,DIRT)
-Plant(PUMPKIN,1,3.0,0,128,GRASS)
-Plant(MELON_BLOCK,1,100.0,0,128,GRASS,DIRT)
-Reed(SUGAR_CANE_BLOCK,5,100.0,0,128,GRASS,DIRT,SAND)
-Tree(1, ldarktree, 2)
 Tree(2, GroundBush, 10)
-CustomObject(dungeon1, dungeon3)
+Tree(1, Taiga2, 5)
+Tree(1, ssprucetree, 5)
+CustomObject(iceigloo, snowigloo, campfire)
 
 #######################################################################
 # +-----------------------------------------------------------------+ #
@@ -412,7 +399,7 @@ BiomeObjects:
 # regardless of these settings.
 # Disables strongholds for this biome. If there is no suitable biome nearby,
 # Minecraft will ignore this setting.
-StrongholdsEnabled: false
+StrongholdsEnabled: true
 
 # Whether a Woodland Mansion can be placed in this biome.
 WoodLandMansionsEnabled: false
@@ -424,7 +411,7 @@ OceanMonumentsEnabled: false
 NetherFortressesEnabled: true
 
 # The village type in this biome. Can be wood, sandstone, taiga, savanna or disabled.
-VillageType: wood
+VillageType: disabled
 
 # The mineshaft type in this biome. Can be normal, mesa or disabled.
 MineshaftType: normal
@@ -435,7 +422,7 @@ MineshaftType: normal
 MineshaftRarity: 1.0
 
 # The type of the aboveground rare building in this biome. Can be desertPyramid, jungleTemple, swampHut, igloo or disabled.
-RareBuildingType: disabled
+RareBuildingType: igloo
 
 
 #######################################################################
@@ -483,12 +470,12 @@ SpawnAmbientCreatures: []
 # a mob list from a vanilla biome.
 # NOTE: Only works for biomes with id's under < 255 (non-virtual biomes).
 # For virtual biomes the BiomeDictId is inherited via ReplaceToBiomeName.
-BiomeDictId: PLAINS
+BiomeDictId:
 
 # Inherit the internal mobs list of another biome. Inherited mobs can be 
 # overridden using the SpawnMonsters, SpawnCreatures, SpawnWaterCreatures
 # and SpawnAmbientCreatures settings. Any mob type defined using those settings
 # will override inherited mob settings for the same mob.
 # Use this setting to inherit modded mobs from vanilla biomes (see also: BiomeDictId)
-InheritMobsBiomeName: Plains
+InheritMobsBiomeName: Extreme Hills
 
