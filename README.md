@@ -8,4 +8,4 @@ Jest to customowy generator biomów robiony z nudów na obiektach z INTERNETU
   world:
     generator: TerrainControl`
 * Usuń aktualny folder world i włącz serwer, wszystko powinno działać
-# SS https://imgur.com/a/5I3V349 | https://imgur.com/a/fWVqTYp
+# https://imgur.com/a/zcjg5iI#uBFyHxH
